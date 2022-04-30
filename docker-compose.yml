@@ -1,0 +1,25 @@
+version: '3'
+services:
+  distantworld-server:
+    container_name: distantworld-server
+    build: ./distantworld-server
+    image: distantworld-server:latest
+    ports:
+      - 58081:8080
+    networks:
+      - hermes
+
+  distantworld-client:
+    container_name: distantworld-client
+    build: ./distantworld-client
+    image: distantworld-client:latest
+    ports:
+      - 8080:8080
+    networks:
+      - hermes
+    depends_on:
+      - distantworld-server
+
+networks:
+  hermes:
+    name: hermes
