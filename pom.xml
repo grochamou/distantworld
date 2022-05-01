@@ -49,6 +49,7 @@
     </build>
 
     <modules>
+        <module>hermes/hermes-client</module>
         <module>distantworld-client</module>
         <module>distantworld-server</module>
     </modules>

@@ -104,9 +104,6 @@
 					</plugin>
 				</plugins>
 			</build>
-			<properties>
-				<server.port>8080</server.port>
-			</properties>
 			<dependencies>
 				<dependency>
 					<groupId>org.springframework.boot</groupId>
@@ -114,6 +111,31 @@
 					<scope>provided</scope>
 				</dependency>
 			</dependencies>
+		</profile>
+		<profile>
+			<id>heroku</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.vaadin</groupId>
+						<artifactId>vaadin-maven-plugin</artifactId>
+						<version>${vaadin.version}</version>
+						<executions>
+							<execution>
+								<id>frontend</id>
+								<phase>compile</phase>
+								<goals>
+									<goal>prepare-frontend</goal>
+									<goal>build-frontend</goal>
+								</goals>
+								<configuration>
+									<productionMode>true</productionMode>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 
