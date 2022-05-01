@@ -140,6 +140,7 @@
 						<artifactId>heroku-maven-plugin</artifactId>
 						<configuration>
 							<appName>grochamou-distantworld-server</appName>
+							<jdkVersion>1.8</jdkVersion>
 						</configuration>
 					</plugin>
 				</plugins>

@@ -161,6 +161,7 @@
 						<artifactId>heroku-maven-plugin</artifactId>
 						<configuration>
 							<appName>grochamou-distantworld-client</appName>
+							<jdkVersion>11</jdkVersion>
 						</configuration>
 					</plugin>
 				</plugins>
