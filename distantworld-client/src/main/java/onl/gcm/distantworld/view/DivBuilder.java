@@ -1,4 +1,4 @@
-package brussels.spfb.distantworld.view;
+package onl.gcm.distantworld.view;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Div;

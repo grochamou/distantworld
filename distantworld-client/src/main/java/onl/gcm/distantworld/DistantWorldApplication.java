@@ -1,15 +1,15 @@
-package brussels.spfb.distantworld.server;
+package onl.gcm.distantworld;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "brussels.spfb.distantworld.controller" })
-public class DistantWorldServerApplication {
+@ComponentScan(basePackages = { "onl.gcm.hermes.client" })
+public class DistantWorldApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DistantWorldServerApplication.class, args);
+		SpringApplication.run(DistantWorldApplication.class, args);
 	}
 
 }

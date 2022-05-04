@@ -9,7 +9,7 @@
         <version>2.6.7</version>
     </parent>
 
-    <groupId>brussels.spfb.distantworld</groupId>
+    <groupId>onl.gcm.distantworld</groupId>
     <artifactId>distantworld</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>

@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>brussels.spfb.distantworld</groupId>
+		<groupId>onl.gcm.distantworld</groupId>
 		<artifactId>distantworld</artifactId>
 		<version>${revision}</version>
 	</parent>
 
-	<groupId>brussels.spfb.distantworld</groupId>
+	<groupId>onl.gcm.distantworld</groupId>
 	<artifactId>distantworld-client</artifactId>
 	<version>${revision}</version>
 	<packaging>war</packaging>
@@ -43,7 +43,7 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>brussels.spfb.hermes</groupId>
+			<groupId>onl.gcm.hermes</groupId>
 			<artifactId>hermes-client</artifactId>
 			<version>${hermes.client.version}</version>
 		</dependency>
@@ -160,7 +160,7 @@
 						<groupId>com.heroku.sdk</groupId>
 						<artifactId>heroku-maven-plugin</artifactId>
 						<configuration>
-							<appName>grochamou-distantworld-client</appName>
+							<appName>gcm-distantworld-client</appName>
 							<jdkVersion>11</jdkVersion>
 						</configuration>
 					</plugin>

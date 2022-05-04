@@ -1,4 +1,4 @@
-package brussels.spfb.distantworld.controller;
+package onl.gcm.distantworld.controller;
 
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.ResponseEntity;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import brussels.spfb.hermes.dto.DistantWorldDTO;
+import onl.gcm.hermes.dto.DistantWorldDTO;
 
 @RestController
 @PropertySource("classpath:hermes.properties")

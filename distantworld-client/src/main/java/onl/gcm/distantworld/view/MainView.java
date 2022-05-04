@@ -1,4 +1,4 @@
-package brussels.spfb.distantworld.view;
+package onl.gcm.distantworld.view;
 
 import javax.annotation.PostConstruct;
 
@@ -8,7 +8,7 @@ import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestClientException;
 
-import brussels.spfb.hermes.client.DistantWorldClient;
+import onl.gcm.hermes.client.DistantWorldClient;
 
 @Route("")
 public class MainView extends Div {
