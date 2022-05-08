@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.RestClientException;
 
 import onl.gcm.hermes.client.DistantWorldClient;
+import onl.gcm.hermes.client.HermesClient;
 
 @Route("")
 public class MainView extends Div {
@@ -25,7 +26,7 @@ public class MainView extends Div {
         String s;
         boolean ok;
 
-        s = String.valueOf(distantWorldClient.isHermesAlive());
+        s = String.valueOf(distantWorldClient.isHermesServerAlive());
         add(DivBuilder.create().setText("Hermes isAlive: " + s).build());
 
         s = String.valueOf(distantWorldClient.isAlive());
@@ -39,7 +40,7 @@ public class MainView extends Div {
             ok = true;
         } catch (RestClientException e) {
             ok = false;
-            s = distantWorldClient.getErrorMessage(e);
+            s = HermesClient.getErrorMessage(e);
         }
         add(DivBuilder.create().setText("DistantWorld getTest: " + s).setColor(ok ? GREEN_COLOR : RED_COLOR).build());
 
@@ -52,7 +53,7 @@ public class MainView extends Div {
             ok = true;
         } catch (RestClientException e) {
             ok = false;
-            s = distantWorldClient.getErrorMessage(e);
+            s = HermesClient.getErrorMessage(e);
         }
         add(DivBuilder.create().setText("DistantWorld getNoContent: " + s).setColor(ok ? GREEN_COLOR : RED_COLOR)
                 .build());
@@ -64,7 +65,7 @@ public class MainView extends Div {
             ok = true;
         } catch (RestClientException e) {
             ok = false;
-            s = distantWorldClient.getErrorMessage(e);
+            s = HermesClient.getErrorMessage(e);
         }
         add(DivBuilder.create().setText("DistantWorld getNotFound: " + s).setColor(ok ? GREEN_COLOR : RED_COLOR)
                 .build());
@@ -75,7 +76,7 @@ public class MainView extends Div {
             ok = true;
         } catch (RestClientException e) {
             ok = false;
-            s = distantWorldClient.getErrorMessage(e);
+            s = HermesClient.getErrorMessage(e);
         }
         add(DivBuilder.create().setText("DistantWorld getCrash: " + s).setColor(ok ? GREEN_COLOR : RED_COLOR).build());
     }

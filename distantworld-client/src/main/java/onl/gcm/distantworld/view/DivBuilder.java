@@ -1,5 +1,7 @@
 package onl.gcm.distantworld.view;
 
+import java.util.Arrays;
+
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.Div;
 
@@ -25,12 +27,12 @@ public class DivBuilder {
         return this;
     }
 
-    public DivBuilder add(Component component) {
-        div.add(component);
+    public DivBuilder add(Component... components) {
+        Arrays.stream(components).forEach(div::add);
         return this;
     }
 
-    // Private constructor to prevent instantiation.
+    // Private constructor to prevent manual instantiation.
     private DivBuilder() {
         div = new Div();
     }

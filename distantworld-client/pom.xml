@@ -42,6 +42,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>onl.gcm.hermes</groupId>
 			<artifactId>hermes-client</artifactId>
@@ -84,6 +85,7 @@
 				<spring.profiles.active>development</spring.profiles.active>
 			</properties>
 		</profile>
+
 		<profile>
 			<id>docker</id>
 			<activation>
@@ -125,6 +127,7 @@
 				</dependency>
 			</dependencies>
 		</profile>
+
 		<profile>
 			<id>heroku</id>
 			<activation>
