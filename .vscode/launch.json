@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "DistantWorld Server",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "onl.gcm.distantworld.server.DistantWorldServerApplication",
+            "projectName": "distantworld-server",
+            "vmArgs": "-Dspring.profiles.active=development",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "DistantWorld Client",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "onl.gcm.distantworld.DistantWorldApplication",
+            "projectName": "distantworld-client",
+            "vmArgs": "-Dspring.profiles.active=development",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
