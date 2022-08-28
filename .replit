@@ -1,5 +1,5 @@
 compile = "./mvnw install"
-run = "./mvnw spring-boot:run -Dspring-boot.run.profiles=replit -f hermes-server/pom.xml"
+run = "./mvnw spring-boot:run -Dspring-boot.run.profiles=replit -f distantworld-server/pom.xml"
 hidden = ["**/*.class"]
 
 [packager]
@@ -55,4 +55,4 @@ type = "request"
 
 [debugger.interactive.launchMessage.arguments]
 classPaths = ["."]
-mainClass = "HermesServerApplication"
+mainClass = "DistantWorldServerApplication"
