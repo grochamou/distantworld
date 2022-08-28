@@ -198,6 +198,19 @@
 				</dependency>
 			</dependencies>
 		</profile>
+
+		<profile>
+			<id>replit</id>
+			<activation>
+				<property>
+					<name>spring.profiles.active</name>
+					<value>replit</value>
+				</property>
+			</activation>
+			<properties>
+				<spring.profiles.active>replit</spring.profiles.active>
+			</properties>
+		</profile>
 	</profiles>
 
 </project>
