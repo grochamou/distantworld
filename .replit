@@ -1,5 +1,5 @@
-compile = "git submodule update --init --recursive && ./mvnw clean install -Preplit"
-run = "./mvnw spring-boot:run -Dspring-boot.run.profiles=replit -f distantworld-server/pom.xml"
+compile = "git submodule update --init --recursive && mvn install -Preplit -f hermes/hermes-client/pom.xml && mvn package -Preplit -f distantworld-server/pom.xml"
+run = "java -Dspring.profiles.active=replit -jar distantworld-server/target/distantworld-server-0.0.1-SNAPSHOT.war"
 hidden = ["**/*.class"]
 
 [packager]
@@ -24,7 +24,7 @@ channel = "stable-21_11"
 support = true
 
 [debugger.compile]
-command = "./mvnw clean install -Preplit"
+command = "mvn package -Preplit"
 
 [debugger.interactive]
 transport = "localhost:0"
@@ -55,4 +55,4 @@ type = "request"
 
 [debugger.interactive.launchMessage.arguments]
 classPaths = ["."]
-mainClass = "DistantWorldServerApplication"
+mainClass = "onl.gcm.distantworld.server.DistantWorldServerApplication"
